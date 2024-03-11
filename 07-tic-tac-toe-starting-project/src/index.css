@@ -18,11 +18,9 @@ html {
 }
 
 body {
-  background: radial-gradient(
-      circle at top,
+  background: radial-gradient(circle at top,
       rgba(241, 210, 70, 0.98),
-      rgba(250, 176, 103, 0.87)
-    ),
+      rgba(250, 176, 103, 0.87)),
     url('bg-pattern-dark.png');
   background-repeat: repeat;
   background-size: 100% 100%, 30% 30%, 100% 100%;
@@ -285,11 +283,50 @@ ol {
   margin-top: 1.5rem;
 }
 
+@media only screen and (max-width: 721px) {
+  #game-board button {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 656px) {
+  .flex-column {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+@media only screen and (max-width: 372px) {
+  .player-name {
+    font-size: 0.75rem;
+  }
+
+  .player-symbol {
+    margin: 0;
+  }
+
+  #game-board button {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  #game-board button {
+    padding: 0;
+  }
+
+
+}
+
 @keyframes slide-in-from-left {
   0% {
     opacity: 0;
     transform: translateX(-30%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -300,9 +337,11 @@ ol {
   0% {
     color: #e1dec7;
   }
+
   50% {
     color: #9f9d83;
   }
+
   100% {
     color: #e1dec7;
   }
@@ -312,9 +351,11 @@ ol {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -325,10 +366,12 @@ ol {
     border-color: #f6e35a;
     box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
   }
+
   50% {
     border-color: #f8c031;
     box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
   }
+
   100% {
     border-color: #f6e35a;
     box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
@@ -341,10 +384,12 @@ ol {
     transform: scale(0);
     opacity: 0;
   }
+
   80% {
     transform: scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
   }
